@@ -1,0 +1,734 @@
+
+<!doctype html> 
+<html lang="en">
+  <head>
+    <!-- Required meta tags --> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <!-- font fam -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
+    
+    <link href="https://fonts.googleapis.com/css?family=Maitree|Merriweather|Raleway" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>Practice page</title> 
+  </head>
+  
+  <body>
+        
+    <!-- main styles -->
+
+    <style>
+      
+      html {
+        font-size: 11.5px;
+        padding: 0;
+        margin: 0;
+      }
+      
+      @media (min-width: 420px) {
+        html {
+          font-size: 13px;
+        }
+      }
+      
+      @media (min-width: 620px) {
+        html {
+          font-size: 15px;
+        }
+      }
+      
+      @media (min-width: 980px) {
+        html {
+          font-size: 17.5px;
+        }
+      }
+      
+      @media (min-width: 1200px) {
+        html {
+          font-size: 20px;
+        }
+      }
+    
+     a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      a:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      header {
+        background-image: url("assets/first-wallpaper.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    </style>
+    
+    <style>
+      .menu-row {
+        background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.0));
+      }
+      
+      .main-menu {
+        font-family: Maitree;
+        color: whitesmoke;
+        text-align: center;
+        font-size: .7rem;
+        font-weight: bold;
+        border-left: .1rem solid rgba(177,177,177,.65); 
+      }
+      
+      .grey-menu {
+        color: rgba(177,177,177,.65);
+        border-left: none;
+      }
+      
+      .first-dimond {
+        height: 18rem;
+        width: 18rem;
+        overflow: hidden;
+        /* Rotate */
+
+    transform: rotate(-45deg);
+        transform-origin: center center;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: calc(50% - 9rem);
+        margin-top: 7rem;
+        border-radius: .2rem;
+        box-shadow: 0 0 2rem rgba(0,0,0,.8) inset;
+      }
+      
+      .shadow-dimond:before, .shadow-dimond:after, .second-diamond::after, .second-diamond::before {
+  content: "";
+  position: absolute;
+  height:3rem;
+  border-bottom: .2rem solid rgba(200,200,200,.6);
+  top: -35%;
+        left:45%;
+  width: 5rem;
+        transform: rotate(90deg);
+      }
+      
+      .shadow-dimond:after, .second-diamond:after {
+        top: 50%;
+        left: -40%;
+        transform: rotate(180deg);
+
+      }
+      
+      .first-dimond-inner {
+        height: 40rem;
+        width: 40rem;
+        transform: rotate(45deg);
+        background-image: url(assets/first-wallpaper.jpg);
+        background-size: 200% 110%;
+        background-position: center center;
+        position: relative;
+        left: -55%;
+        top: -75%;
+      }
+
+      .shadow-dimond {
+        margin-top: -18rem;
+        background-color: rgba(0,0,0,.2);
+        overflow: visible;     
+
+      }
+      
+      .shadow-dimond-2 {
+        background-color: none;
+      }
+      
+      .row-horizontal {
+        margin-top: -13rem;
+      }
+      
+      .main-title, .orange-text, .orange-title, .sec-orange-text, .sec-orange-title {
+        text-align: center;
+        font-family: "Merriweather";
+        color: whitesmoke;
+        padding: 0;
+        margin: 0;
+        font-size: 3.5rem;
+        line-height: 3rem;
+      }
+      
+      .main-text {
+        color: whitesmoke;
+        font-size: .85rem;
+        font-family: Maitree;
+        padding: 0;
+        margin: 0;
+        line-height: 1rem;
+        font-weight: 700;
+        text-align: center;
+      }
+      .orange-diamond {
+        background-color: rgb(240,128,41);
+        width: 5rem;
+        height: 5rem;
+        transform: rotate(90deg);
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: -25%;
+        left: 10%;
+        box-shadow: inset 0 0 15px rgba(0,0,0,.35);
+      }
+      
+      .orange-title, .sec-orange-title {
+        font-size: 1em;
+        line-height: 1.2rem;
+        font-weight: bold;
+      }
+      
+      .orange-text, .sec-orange-text {
+        font-size: .65rem;
+        text-align: center;
+        line-height: 1rem;
+      }
+      
+      .orange-icon {
+        text-align: center;
+        font-size: 2rem;
+        color: rgba(210,210,210,.65);
+        margin-left: 1.75rem;
+        position: relative;
+        left: calc(50% - 2.65rem);
+      }
+      
+      .wrapper {
+        height: 7rem;
+        width: 7rem;
+        border: .2rem solid rgba(0,0,0,.0);
+        transform: rotate(-45deg);
+        margin-top: -1.5rem;
+        margin-left: -1.5rem;
+      }
+      
+      .rotate {
+        background-color: rgba(0,0,0,.0);
+        transform: rotate(135deg);
+        box-shadow: 0 0 0px black;
+      }
+
+    </style>
+    
+    <header>
+      
+      <div class="row menu-row justify-content-center pt-3 pt-md-5 pb-3 pl-5 pr-5">
+        <div class="col-12 col-md-2 m-0 p-0">
+          <p class="main-menu grey-menu mb-3 mb-md-0">Home</p>
+        </div>
+        <div class="col-12 col-md-2 m-0 p-0">
+          <p class="main-menu mb-3 mb-md-0">About Us</p>
+        </div>
+        <div class="col-12 col-md-2 m-0 p-0">
+          <p class="main-menu mb-3 mb-md-0">Events & Classes</p>
+        </div>
+        <div class="col-12 col-md-2 m-0 p-0">
+          <p class="main-menu mb-3 mb-md-0">Get Involved</p>
+        </div>
+        <div class="col-12 col-md-2 m-0 p-0">
+          <p class="main-menu mb-3 mb-md-0">Contacts</p>
+        </div>                                                 
+      </div>
+      
+
+      <div class="first-dimond">
+        <div class="first-dimond-inner"></div>
+      </div>
+      <div class="first-dimond shadow-dimond">
+      <div class="orange-diamond">
+        <div class="wrapper">
+        <div class="row justify-content-center mt-0 row-orange">
+          <div class="col-12">
+            <p class="orange-title p-0 mt-5">DONATE</p>
+
+            <p class="orange-text p-0 m-0">our garden</p>
+            <div class="col-auto mx-auto">
+            <p class="mt-1 align-self-center"><i class="fas orange-icon fa-chevron-down"></i></p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>      
+      
+      <div class="shadow-dimond first-dimond rotate"></div>
+    
+    </header>
+    
+        <div class="row justify-content-center row-horizontal">
+          <div class="col-12 m-0 p-0">
+            <p class="main-title pb-0 mb-2">Botanic</p>
+            <p class="main-title pt-0 mt-0">garden</p>
+          </div>
+          <div class="row justify-content-center mt-4">
+            <div class="col-auto">
+              <p class="main-text">Exclusive plants</p>
+              <p class="main-text">unique by their size,</p>
+              <p class="main-text">and forms</p>
+            </div>
+          </div>
+        </div>
+    
+    <style>
+      .wrapper-1 {
+        height: auto;
+        width: 100%;
+      }
+      .welcome-title, .updates-title {
+        font-family: Merriweather;
+        font-size: 3.5rem;
+        color: rgba(0,0,0,.85);
+        text-align: center;
+        margin-top: 3rem;
+      }
+      
+      .welcome-text, .update-text {
+        font-family: maitree;
+        color: rgba(0,0,0,.5);
+        text-align: left;
+        font-size: .75rem;
+        line-height: 1.2rem;
+        padding-top: 1rem;
+        margin: 0;
+      }
+      
+      @media (max-width: 768px) {
+        .welcome-text, .welcome-phone, .update-text {
+          text-align: center;
+          font-weight: 700;
+          font-size: 1rem;
+        }
+      }
+      
+      .welcome-bold-text {
+        font-weight: bold;
+        color: rgba(0,0,0,.85);
+        font-family: raleway;
+      }
+      
+      .welcome-phone {
+        font-family: raleway;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      
+      .read-more {
+        font-family: merriweather;
+        font-weight: 400;
+        color: rgb(240,128,41);
+        font-size: 1.75rem;
+        text-align: center;
+      }
+      
+      .read-icon {
+        color: rgb(240,128,41);
+        font-size: 2.5rem;
+        font-weight: 100;
+      }
+    </style>
+    
+    <div class="wrapper-1">
+    
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 welcome mt-5">
+          <p class="welcome-title">Welcome!</p>
+        </div>
+          <div class="col-12 col-md-3 pr-5 pl-5 pl-md-0 pr-md-0 mr-md-5">
+            <p class="welcome-text mr-md-2">Lorem ipsum dolor sit amet, id pri minim abhorreant, augue saperet insolens est id, eu illud maiorum percipitur quo. Vim cu facilis commune democritum, primis equidem at cum. Id nibh vide soluta ius. Eam ei nostro epicuri qualisque, ei pro neglegentur disputationi.</p>
+          </div>
+          <div class="col-12 col-md-3 pr-5 pl-5 pl-md-0 pr-md-0">
+            <p class="welcome-text">Vocent aliquando vim ei. Nam ut nostrud dolores. Cu sumo iudico epicurei vis. Vix noster melius ei, ad sed modus nostrud, est cu minim scribentur. Ei probo facete sit. Sed id scripta imperdiet cotidieque, vix augue simul ad, te zril soluta pri. His quas omnes at, vim in vivendum indoctum.</p>
+          </div>
+      </div>
+      
+      <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-3 pr-5 pl-5 pl-md-5 pr-md-0 mr-md-5">
+          <p class="welcome-text welcome-bold-text m-0 p-0"><strong>USA – Los Angeleso East E Street, Wilmington, CA 90744</strong></p>
+          <p class="welcome-text welcome-bold-text m-0 p-0">E – mail: mail@demolink.org</p>
+          <p class="welcome-phone">(800) 123 1234</p>
+        </div>
+        <div class="col-12 col-md-3 pr-5 pl-5 pl-md-0 pr-md-0">
+          <div class="row justify-content-between">
+            <div class="col-6">
+              <p class="welcome-text m-0 p-0">Monday - Friday</p>
+              <p class="welcome-text welcome-bold-text m-0 p-0">8a.m. to 5p.m.</p>
+              <p class="welcome-text m-0 p-0">Saturday & Sunday</p>
+              <p class="welcome-text welcome-bold-text m-0 p-0">10a.m. to 3p.m.</p>
+            </div>
+            <div class="col-6">
+              <p class="welcome-text m-0 p-0 welcome-bold-text">Closed mondays</p>
+              <p class="welcome-text m-0 p-0">(But open Martin Luther King JH. day, 10a.m. to 4:30p.m.)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-5">
+          <div class="col-12 col-md-3 pr-5 pl-5 pl-md-0 pr-md-0 mr-md-5">
+            <p class="welcome-text mr-md-2">Lorem ipsum dolor sit amet, eu illud maiorum percipitur quo. Vim cu facilis commune democritum, primis equidem at cum. Eam ei nostro epicuri qualisque, ei pro neglegentur disputationi.</p>
+          </div>
+          <div class="col-12 col-md-3 pr-5 pl-5 pl-md-0 pr-md-0">
+            <p class="welcome-text">Ei probo facete sit. Sed id scripta imperdiet cotidieque, vix augue simul ad, te zril soluta pri. His quas omnes at, vim in vivendum indoctum.</p>
+          </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <p class="read-more">Read more</p>
+        </div>
+        <div class="col-12 mt-1 mb-5">
+          <p class="read-more"><i class="read-icon fas fa-chevron-down"></i></p>
+        </div>
+      </div>
+    
+    </div>
+    
+    <style>
+      .wrapper-2 {
+        background-image: url(assets/second-wallpaper.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 20rem;
+      }
+      
+      .second-diamond {
+        height: 18rem;
+        width: 18rem;
+        background-color: rgba(0,0,0,.5);
+        transform: rotate(45deg);
+        margin-left: calc(50% - 9rem);
+        margin-top: 1rem;
+        position: relative;
+        top: 1rem;
+      }
+      
+      .orange-sec-diamond {
+        transform: rotate(0);
+        right: 1rem;
+        bottom: inherit;
+        top: 12rem;
+        left: inherit;
+        height: 5rem;
+        width: 5rem;
+        background-color: rgb(240,128,41);
+        position: absolute;
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+      }
+      
+      .sec-dia-title {
+        color: whitesmoke;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 1.25rem;
+        font-family: merriweather;
+        line-height: 1.3rem;
+      }
+      
+      .sec-diamond-row {
+        margin-top: -16rem;
+      }
+      
+      .sec-dia-text {
+        font-size: .65rem;
+        line-height: .8rem;
+        color: rgba(225,225,225,.75);
+        text-align: center;
+        font-family: maitree;
+        font-weight: 700;
+      }
+      
+      .wrapper-sec {
+        height: 7.1rem;
+        width: 7.1rem;
+        border: .2rem solid rgba(0,0,0,.0);
+        transform: rotate(-45deg);
+        margin-top: -1rem;
+        margin-left: -1rem;
+      }
+      
+      .left-wing {
+        border-left: .15rem solid rgba(255,255,255,.8);
+        border-bottom: .15rem solid rgba(255,255,255,.8);
+        height: 1rem;
+        width: 1rem;
+        position: relative;
+        left: 1rem;
+        top: 16rem;
+      }
+      
+      .right-wing {
+        border-right: .15rem solid rgba(255,255,255,.8);
+        border-top: .15rem solid rgba(255,255,255,.8);
+        height: 1rem;
+        width: 1rem;
+        position: relative;
+        left: 16rem;
+      }
+      
+      .rotate-sec {
+        margin-bottom: -19rem;
+        background-color: rgba(0,0,0,0);
+        transform: rotate(225deg);
+      }
+    </style>
+    
+    <div class="wrapper-2">
+      <div class="second-diamond rotate-sec"></div>
+      <div class="second-diamond">
+        <div class="left-wing"></div>
+        <div class="right-wing"></div>
+       <div class="orange-sec-diamond">
+         <div class="wrapper-sec">
+        <div class="row justify-content-center row-orange">
+          <div class="col-12">
+            <p class="sec-orange-title p-0 mt-4">BOOK</p>
+
+            <p class="sec-orange-text p-0 m-0">courses</p>
+            <p class="mt-2 align-self-center"><i class="fas orange-icon fa-chevron-down"></i></p>
+          </div>
+        </div>
+         </div>
+      </div>
+      </div>
+      
+      <div class="row sec-diamond-row justify-content-center">
+        <div class="col-10">
+          <p class="sec-dia-title">Curses <br> of the garden</p>  
+        </div>
+        <div class="col-6 col-sm-6 col-md-4 mt-4 mt-sm-5 pl-5 pr-5">
+          <p class="sec-dia-text">Mei quod ancillae at, vix prima solum id, dolore splendide philosophia ius et. Nec ei illum erant principes, ne iisque tritani vix. Ea idque ocurreret accommodare nec. Semper viderer omittantur ut sea, decore quaestio disputando pri id. Omnesque insolens ne vis, ei putant urbanitas ius, eius sadipscing his te.</p>
+        </div>
+      </div>      
+    
+    </div>
+    
+    <style>
+      .wrapper-3 {
+        height: auto;
+        width: 100%;
+      }
+      
+      .update-little-title {
+        color: rgb(201,128,41);
+        font-family: raleway;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+      
+      .month {
+        text-align: center;
+        font-family: merriweather;
+        color: rgba(0,0,0,.75);
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .day {
+        font-size: 4.5rem;
+        text-align: center;
+        font-family: raleway;
+        color: rgba(0,0,0,.75);
+        font-weight: bold;
+        line-height: 4.5rem;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .row-border {
+        background-color: rgba(0,0,0,.05);
+        height: .1rem;
+        width: 60%;
+        position: relative;
+        left: 20%;
+        margin-top: 2rem;
+      }
+      
+      .events {
+        font-family: merriweather;
+        color: rgba(0,0,0,.85);
+        line-height: 1.2rem;
+        text-align: center;
+        font-weight: bold;
+      }
+      
+      .events-icon {
+        position: relative;
+        left: calc(50% - 1rem);
+        top: -1rem;
+        font-size: 2rem;
+      }
+    </style>
+    
+    <div class="wrapper-3">
+    
+      <div class="row justify-content-center mt-5">
+        <div class="col-12">
+          <p class="updates-title">Our updates:</p>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-md-3">
+          <div class="row justify-content-center pt-md-3">
+            <div class="col-5 col-md-4">
+              <p class="month">April</p>
+              <p class="day">15</p>
+            </div>
+            <div class="col-5 col-md-8 pr-md-4">
+             <p class="update-little-title">Special exhibit: Foods of America</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 pl-5 pr-5 p-md-0 pl-md-4 mt-3 mt-md-0">
+          <p class="update-text">Consulatu dissentiet vel ne, explicari principes ad sed. Mel an inani principes, ea qui nonumes democritum. Vis movet incorrupte no, illum vocent epicuri pri at, vel postea inimicus et.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row-border"></div>
+    
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-md-3 pl-5 pr-5 p-md-0 pr-md-4 mt-3 mt-md-0 mb-5 mb-md-0">
+          <p class="update-text">Cu sumo iudico epicurei vis. Vix noster melius ei, ad sed modus nostrud, est cu minim scribentur. Ei probo facete sit. Sed id scripta imperdiet cotidieque, vix augue simul ad, te zril soluta pri. His quas omnes at, vim in vivendum indoctum.
+</p>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="row justify-content-center pt-md-3">
+            <div class="col-5 col-md-8 pl-md-4">
+             <p class="update-little-title">Fall harvest dinner - an education fundraiser</p>
+            </div>
+            <div class="col-5 col-md-4">
+              <p class="month">April</p>
+              <p class="day">17</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="row-border"></div>
+    
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-md-3">
+          <div class="row justify-content-center pt-md-3">
+            <div class="col-5 col-md-4">
+              <p class="month">April</p>
+              <p class="day">19</p>
+            </div>
+            <div class="col-5 col-md-8 pr-md-4">
+             <p class="update-little-title">Native plant sale Extravaganza</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 pl-5 pr-5 p-md-0 pl-md-4 mt-3 mt-md-0">
+          <p class="update-text"> Ea idque ocurreret accommodare nec. Semper viderer omittantur ut sea, decore quaestio disputando pri id. Omnesque insolens ne vis, ei putant urbanitas ius, eius sadipscing his te. Mel ut omnis clita appareat.</p>
+        </div>
+      </div>
+    
+      <div class="row-border"></div>
+    
+      <div class="row justify-content-center mt-5">
+        <div class="col-12">
+          <p class="events">View our events <br> calendar</p>
+        </div>
+        <div class="col-12">
+          <i class="events-icon fas fa-chevron-down"></i>
+        </div>
+      </div>
+      
+    </div>
+
+    <style>
+      .wrapper-4 {
+        background-image: url(assets/wallpaper-3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-top: 2rem;
+      }
+      
+      .shadow {
+        background-color: rgba(0,0,0,.5);
+        height: 100%;
+        width: 100%;
+        padding: 5rem 2rem 5rem 2rem;
+      }
+      
+      .footer-title {
+        font-family: merriweather;
+        font-size: 1rem;
+        font-weight: bold;
+        color: whitesmoke;
+        line-height: 1.2rem;
+      }
+      
+      .footer-text, .footer-phone {
+        font-family: raleway;
+        font-size: .75rem;
+        color: whitesmoke;
+        font-weight: bold;
+        line-height: .9rem;
+      }
+      
+      .footer-phone {
+        font-size: 1rem;
+      }
+      
+      .icons {
+        color: whitesmoke;
+      }
+    </style>
+
+    <div class="wrapper-4">
+      <div class="shadow">
+
+      <div class="row justify-content-center">
+        <div class="col-4 col-md-2">
+          <p class="footer-title">Botanical garden</p>
+          <p class="footer-text">2016 Privacy Copyright</p>
+        </div>
+        <div class="col-4 col--md-5">
+          <p class="footer-text footer-bold-text m-0 p-0"><strong>USA – Los Angeleso East E Street, Wilmington, CA 90744</strong></p>
+          <p class="footer-text footer-bold-text mt-0 p-0">E – mail: mail@demolink.org</p>
+          <p class="footer-phone mt-4" style="color: rgb(201,128,41);">(800) 123 1234</p>
+          <p class="icons"><i class="fab fa-facebook-square"></i> <i class="fab fa-google-plus-g"></i> <i class="fab fa-linkedin-in"></i> <i class="fab fa-twitter"></i></p>
+        </div>
+        <div class="col-4 col-md-2">
+              <p class="footer-text m-0 p-0">Monday - Friday</p>
+              <p class="footer-text footer-bold-text m-0 p-0" style="color: rgb(201,128,41);">8a.m. to 5p.m.</p>
+              <p class="footer-text m-0 p-0">Saturday & Sunday</p>
+              <p class="footer-text footer-bold-text m-0 p-0" style="color: rgb(201,128,41);">10a.m. to 3p.m.</p>
+              <br>
+              <p class="footer-text m-0 p-0 footer-bold-text" style="color: rgb(201,128,41);">Closed mondays</p>
+              <p class="footer-text m-0 p-0">(But open Martin Luther King JH. day, 10a.m. to 4:30p.m.)</p>
+        </div>
+      </div>
+      </div>
+    </div>
+ <!-- Optional JavaScript --> 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+  </body> 
+</html>
